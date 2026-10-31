@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>POWER FITNESS GYM | Antop Hill, Wadala, Mumbai (4.9★)</title>
+  <meta name="description" content="Power Fitness Gym located at Salt Pan Road, Raval Pada, Sangam Nagar, Antop Hill, Wadala, Mumbai 400037. Fully air-conditioned workout floor, full range of strength and cardio equipment, certified personal training. Rated 4.9/5 (350+ reviews).">
+  <meta name="theme-color" content="#09090b">
+  
+  <!-- OpenGraph / Social -->
+  <meta property="og:title" content="POWER FITNESS GYM | Antop Hill, Wadala, Mumbai (4.9★)">
+  <meta property="og:description" content="Premier AC gym in Wadala, Mumbai with full strength and cardio equipment, certified personal training, and 4.9★ rating.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/poster.jpg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Custom Cursor (Desktop Only) -->
+  <div class="custom-cursor" id="customCursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+  </div>
+
+  <!-- Global Header / Navigation -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#top" class="brand-logo" aria-label="POWER FITNESS GYM Home">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </span>
+        <span class="logo-text">POWER FITNESS<span class="accent-dot">.</span></span>
+      </a>
+
+      <!-- Live Facility Status Pill (Mon-Sat 6 AM - 12 AM) -->
+      <div class="live-status-pill" title="Power Fitness Gym Operations (Mon-Sat: 6:00 AM - 12:00 AM, Sun: Closed)">
+        <span class="status-indicator"></span>
+        <span class="status-text">OPEN NOW <span class="dim">· 6 AM - 12 AM</span></span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#world" class="nav-link active">Experience</a>
+        <a href="#why-us" class="nav-link">Why Us</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#facility" class="nav-link">Equipment</a>
+        <a href="#coaches" class="nav-link">Coaches</a>
+        <a href="#calculator" class="nav-link">Calculator</a>
+        <a href="#memberships" class="nav-link">Plans</a>
+        <a href="#contact" class="nav-link">Location</a>
+      </nav>
+
+      <!-- Header Action Items -->
+      <div class="header-actions">
+        <!-- Ambient Sound Toggle -->
+        <button class="sound-toggle-btn" id="soundToggle" aria-label="Toggle ambient atmosphere sound" title="Sound Atmosphere">
+          <svg class="sound-off-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <svg class="sound-on-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- CTA Button -->
+        <a href="#vip-pass" class="btn btn-primary btn-sm header-cta" id="headerCtaBtn">
+          <span>CLAIM VIP PASS</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <span class="drawer-title">POWER FITNESS GYM</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="#world" class="drawer-link">The Experience</a>
+        <a href="#why-us" class="drawer-link">Why Choose Us</a>
+        <a href="#story" class="drawer-link">Our Story & Rating</a>
+        <a href="#facility" class="drawer-link">Equipment & Zones</a>
+        <a href="#coaches" class="drawer-link">Certified Coaches</a>
+        <a href="#calculator" class="drawer-link">Macro & BMI Calculator</a>
+        <a href="#memberships" class="drawer-link">Membership Plans</a>
+        <a href="#contact" class="drawer-link">Location & Hours</a>
+        <a href="#vip-pass" class="drawer-link highlight">Claim VIP Pass</a>
+      </nav>
+      <div class="drawer-footer">
+        <p class="drawer-hours">MON – SAT: 6:00 AM – 12:00 AM · SUN: CLOSED</p>
+        <p class="drawer-address">Salt Pan Rd, Raval Pada, Sangam Nagar, Antop Hill, Wadala, Mumbai 400037</p>
+        <p class="drawer-phone"><a href="tel:+919987474437" style="color:var(--accent-red); font-weight:700;">+91 99874 74437</a></p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ====================================================================
+         SECTION 1: SCROLL-WORLD 3D IMMERSIVE SCRUB EXPERIENCE
+         ==================================================================== -->
+    <section class="scroll-world-section" id="world" aria-label="Interactive 3D Gym Flight Experience">
+      <!-- Scrub Progress Bar -->
+      <div class="scroll-scrub-bar" aria-hidden="true">
+        <div class="scrub-fill" id="scrubProgressFill"></div>
+      </div>
+
+      <!-- The Pinned Stage (Fixed to Viewport) -->
+      <div class="world-stage" id="worldStage">
+        <!-- Video Canvas / Container -->
+        <div class="video-canvas-wrapper" id="videoCanvasWrapper">
+          <!-- Poster Image (prevents initial blank paint, essential for mobile/iOS) -->
+          <img src="assets/poster.jpg" alt="Power Fitness Gym Floor Entrance" class="video-poster" id="videoPoster" fetchpriority="high">
+          <!-- Video element populated by scroll-world blob loader -->
+          <video id="worldVideo" class="world-video" muted playsinline preload="auto" poster="assets/poster.jpg"></video>
+          
+          <!-- Cinematic Atmosphere Overlays -->
+          <div class="stage-vignette"></div>
+          <div class="stage-red-beam"></div>
+          <div class="stage-scanlines" aria-hidden="true"></div>
+        </div>
+
+        <!-- Scroll World HUD Overlays / Route Rail -->
+        <div class="world-hud" id="worldHud">
+          <!-- HUD Header telemetry -->
+          <div class="hud-top-data">
+            <div class="hud-tag">
+              <span class="hud-corner-mark">┌</span>
+              <span class="hud-label">MUMBAI // 19.0176° N, 72.8687° E</span>
+              <span class="hud-corner-mark">┐</span>
+            </div>
+            <div class="hud-tag center-tag">
+              <span class="hud-dot"></span>
+              <span class="hud-status">FACILITY GLIDE: <span id="hudPercentage">00%</span></span>
+            </div>
+            <div class="hud-tag">
+              <span class="hud-corner-mark">┌</span>
+              <span class="hud-label">ANTOP HILL // WADALA</span>
+              <span class="hud-corner-mark">┐</span>
+            </div>
+          </div>
+
+          <!-- Interactive Route Waypoints (Vertical on Desktop) -->
+          <div class="world-route" id="worldRoute" aria-label="Camera Flight Checkpoints">
+            <button class="route-waypoint is-active" data-index="0" aria-label="Jump to Entrance">
+              <span class="waypoint-ring"></span>
+              <span class="waypoint-label">01 // ENTRANCE</span>
+            </button>
+            <button class="route-waypoint" data-index="1" aria-label="Jump to Free Weight Run">
+              <span class="waypoint-ring"></span>
+              <span class="waypoint-label">02 // FREE WEIGHTS</span>
+            </button>
+            <button class="route-waypoint" data-index="2" aria-label="Jump to Biomechanics Zone">
+              <span class="waypoint-ring"></span>
+              <span class="waypoint-label">03 // BIOMECHANICS</span>
+            </button>
+            <button class="route-waypoint" data-index="3" aria-label="Jump to The Vault">
+              <span class="waypoint-ring"></span>
+              <span class="waypoint-label">04 // THE VAULT</span>
+            </button>
+          </div>
+
+          <!-- Narrative HUD Cards (Fade in/out synced to scroll position) -->
+          <div class="hud-cards-container" id="hudCardsContainer">
+            
+            <!-- Beat 0: Hero Greeting & Bold Brand Statement -->
+            <article class="hud-card hud-card--0 is-active" id="hudCard0">
+              <div class="hud-card-corners">
+                <span class="c-tl"></span><span class="c-tr"></span>
+                <span class="c-bl"></span><span class="c-br"></span>
+              </div>
+              <div class="hud-badge-row">
+                <span class="tech-badge">PREMIER AC FITNESS CLUB</span>
+                <span class="tech-badge-dot">·</span>
+                <span class="tech-badge-red">4.9★ RATED (350+ REVIEWS)</span>
+              </div>
+              <h1 class="hud-hero-title">
+                <span class="title-outline">FITNESS</span>
+                <span class="title-solid">IMPROVE YOUR SELF</span>
+              </h1>
+              <p class="hud-hero-desc">
+                Located at Salt Pan Road, Raval Pada, Sangam Nagar, Antop Hill, Wadala, Mumbai 400037. Experience a fully air-conditioned workout floor, complete strength and cardio equipment, and certified personal training.
+              </p>
+              <div class="hud-cta-row">
+                <a href="#vip-pass" class="btn btn-primary">
+                  <span>GET FREE VIP PASS</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost">LOCATION & HOURS</a>
+              </div>
+            </article>
+
+            <!-- Beat 1: Free Weight Zone (t ~ 30%) -->
+            <article class="hud-card hud-card--1" id="hudCard1">
+              <div class="hud-card-corners">
+                <span class="c-tl"></span><span class="c-tr"></span>
+                <span class="c-bl"></span><span class="c-br"></span>
+              </div>
+              <div class="hud-badge-row">
+                <span class="tech-badge">ZONE 01</span>
+                <span class="tech-badge-dot">·</span>
+                <span class="tech-badge-red">COMPETITION CALIBRATED</span>
+              </div>
+              <h2 class="hud-card-title">THE DUMBBELL & BENCH RUN</h2>
+              <p class="hud-card-desc">
+                Solid steel dumbbell pairs from 5 lbs up to 150 lbs, laser-etched precision grip knurling, and wide-base competition flat & incline benches with zero frame flex.
+              </p>
+              <ul class="hud-tag-pills">
+                <li>150 LB MAX DUMBBELLS</li>
+                <li>ELEIKO CALIBRATED PLATES</li>
+                <li>TEXAS POWER BARS</li>
+              </ul>
+            </article>
+
+            <!-- Beat 2: Biomechanics & Cables (t ~ 65%) -->
+            <article class="hud-card hud-card--2" id="hudCard2">
+              <div class="hud-card-corners">
+                <span class="c-tl"></span><span class="c-tr"></span>
+                <span class="c-bl"></span><span class="c-br"></span>
+              </div>
+              <div class="hud-badge-row">
+                <span class="tech-badge">ZONE 02</span>
+                <span class="tech-badge-dot">·</span>
+                <span class="tech-badge-red">ERGONOMIC HYPERTROPHY</span>
+              </div>
+              <h2 class="hud-card-title">PRECISION BIOMECHANICS</h2>
+              <p class="hud-card-desc">
+                Custom plate-loaded and pin-selected machines with diverging cam profiles that mirror human muscular strength curves—eliminating joint impingement.
+              </p>
+              <ul class="hud-tag-pills">
+                <li>PRIME FITNESS CAM SYSTEM</li>
+                <li>CUSTOM TORQUE CURVES</li>
+                <li>BILATERAL & ISO-LATERAL</li>
+              </ul>
+            </article>
+
+            <!-- Beat 3: The Sanctuary & Finale (t ~ 95%) -->
+            <article class="hud-card hud-card--3" id="hudCard3">
+              <div class="hud-card-corners">
+                <span class="c-tl"></span><span class="c-tr"></span>
+                <span class="c-bl"></span><span class="c-br"></span>
+              </div>
+              <div class="hud-badge-row">
+                <span class="tech-badge">ZONE 03</span>
+                <span class="tech-badge-dot">·</span>
+                <span class="tech-badge-red">THE MURAL SANCTUARY</span>
+              </div>
+              <h2 class="hud-card-title">FORGED IN DISCIPLINE</h2>
+              <p class="hud-card-desc">
+                Surrounded by iconic bodybuilding history and unfiltered training grit. Walk in with ambition, leave with a transformed physique.
+              </p>
+              <div class="hud-cta-row">
+                <a href="#why-us" class="btn btn-primary">
+                  <span>DISCOVER THE DETAILS ↓</span>
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Bottom HUD Bar & Scroll Prompt -->
+          <div class="hud-bottom-bar">
+            <div class="scroll-prompt" id="scrollPrompt">
+              <div class="mouse-icon">
+                <span class="mouse-wheel"></span>
+              </div>
+              <span class="prompt-text">SCROLL TO FLY THROUGH GYM</span>
+            </div>
+            <div class="telemetry-box">
+              <span class="data-key">AIR QUALITY</span>
+              <span class="data-val">99.8% HEPA</span>
+              <span class="data-divider">/</span>
+              <span class="data-key">TEMP</span>
+              <span class="data-val">68°F (20°C)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Virtual Scroll Height Track (controls scrub duration) -->
+      <div class="scroll-track" id="worldScrollTrack"></div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: WHY CHOOSE US (Inspired directly by user reference)
+         ==================================================================== -->
+    <section class="section-padding why-choose-section" id="why-us">
+      <div class="container">
+        
+        <!-- Section Header with Technical Corner Accents -->
+        <div class="section-header center">
+          <div class="tech-eyebrow">
+            <span class="corner-bracket">┌</span>
+            <span>WHY CHOOSE US</span>
+            <span class="corner-bracket">┐</span>
+          </div>
+          <h2 class="section-title">ENGINEERED FOR PROGRESSION</h2>
+          <p class="section-subtitle">
+            Every square foot of Power Fitness Gym is designed to eliminate friction and empower your fitness journey in Antop Hill, Wadala.
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards Grid (Inspired by reference UI) -->
+        <div class="cards-grid-3">
+          
+          <!-- Card 1: Air Conditioned Workout Floor -->
+          <div class="feature-card" data-card="1">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">AIR-CONDITIONED FLOOR</h3>
+            <p class="card-body">
+              Train in an ultra-clean, temperature-controlled, fully air-conditioned workout space maintained with rigorous daily sanitation standards.
+            </p>
+            <div class="card-footer-link">
+              <span>EXPLORE AMENITIES</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Card 2: Certified Personal Training (Featured Card) -->
+          <div class="feature-card is-highlight" data-card="2">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="card-badge">MOST POPULAR</div>
+            <div class="card-icon-wrap accent-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="card-title">CERTIFIED TRAINING</h3>
+            <p class="card-body">
+              1-on-1 certified personal coaches guiding your form, progressive overload splits, nutrition protocols, and rapid body transformations.
+            </p>
+            <div class="card-footer-link">
+              <span>MEET COACHES</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </div>
+
+          <!-- Card 3: Full Strength & Cardio Equipment -->
+          <div class="feature-card" data-card="3">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="card-icon-wrap">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 18h12"></path>
+                <path d="M6 14h12"></path>
+                <path d="M9 10h6"></path>
+                <path d="M12 2v4"></path>
+                <rect x="4" y="6" width="16" height="16" rx="2"></rect>
+              </svg>
+            </div>
+            <h3 class="card-title">FULL EQUIPMENT RANGE</h3>
+            <p class="card-body">
+              Full range of heavy dumbbells, Olympic bars, pin and plate-loaded machines, plus advanced cardio treadmills and cross trainers.
+            </p>
+            <div class="card-footer-link">
+              <span>VIEW EQUIPMENT</span>
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: OUR STORY (Direct recreation of user reference layout)
+         ==================================================================== -->
+    <section class="section-padding story-section" id="story">
+      <div class="container">
+        <div class="story-grid">
+          
+          <!-- Left: High Impact Authentic Gym Media Card with Corner Brackets -->
+          <div class="story-media-col">
+            <div class="story-media-frame">
+              <div class="card-brackets">
+                <span class="corner tl"></span><span class="corner tr"></span>
+                <span class="corner bl"></span><span class="corner br"></span>
+              </div>
+              <img src="assets/story-athlete.jpg" alt="Power Fitness Gym Athlete Training" class="story-img" loading="lazy">
+              
+              <!-- Video Play Badge Overlay -->
+              <div class="video-play-badge" id="storyVideoBtn" role="button" tabindex="0" aria-label="Watch Facility Showcase Video">
+                <span class="play-pulse"></span>
+                <div class="play-icon-circle">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <div class="play-text-group">
+                  <span class="play-label">PLAY VIDEO</span>
+                  <span class="play-sub">FACILITY TOUR · REEL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Manifesto and Brand Narrative -->
+          <div class="story-content-col">
+            <div class="tech-eyebrow">
+              <span class="corner-bracket">┌</span>
+              <span>OUR STORY & REPUTATION</span>
+              <span class="corner-bracket">┐</span>
+            </div>
+            <h2 class="story-heading">POWER FITNESS GYM — FORGED IN WADALA, MUMBAI</h2>
+            
+            <p class="story-lead">
+              Located at Salt Pan Road, Raval Pada, Sangam Nagar, Antop Hill, Wadala, Mumbai 400037 (with alternative mentions around Naigaon Cross Road, BPCA Building, Sahakar Nagar, Wadala).
+            </p>
+            
+            <p class="story-text">
+              With a <strong>4.9/5 rating based on 350+ customer reviews</strong>, Power Fitness Gym is Wadala's trusted sanctuary for physical transformation. We provide athletes and beginners with an immaculate air-conditioned workout floor, complete strength and cardio equipment, and certified personal trainers who care about your results.
+            </p>
+
+            <!-- Red Underlined Accent Quote (Matches Reference Red Box Accent) -->
+            <div class="story-accent-box">
+              <p class="accent-quote">
+                "Quality equipment, certified guidance, and an air-conditioned, clean environment. Everything you need to achieve your personal best."
+              </p>
+            </div>
+
+            <!-- Action Buttons (Matches Reference Red Button + Ghost Button) -->
+            <div class="story-btn-row">
+              <a href="#vip-pass" class="btn btn-primary">
+                <span>CLAIM VIP PASS</span>
+              </a>
+              <a href="https://www.google.com/search?kgmid=%2Fg%2F11mhxvk6pv" target="_blank" rel="noopener" class="btn btn-ghost">
+                <span>GOOGLE REVIEWS (4.9★)</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: VERIFIED METRICS (Direct recreation of reference numbers)
+         ==================================================================== -->
+    <section class="metrics-section" id="stats" aria-label="Key Facility Metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          
+          <!-- Metric 1: Working Hours -->
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="metric-number-wrap">
+              <span class="counter" data-target="18">0</span>
+              <span class="metric-suffix"> HRS</span>
+            </div>
+            <span class="metric-label">DAILY ACCESS (6 AM - 12 AM)</span>
+          </div>
+
+          <!-- Metric 2: Google Rating -->
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <div class="metric-number-wrap">
+              <span class="counter" data-target="4.9">0.0</span>
+              <span class="metric-suffix"> / 5.0</span>
+            </div>
+            <span class="metric-label">GOOGLE RATING (350+ REVIEWS)</span>
+          </div>
+
+          <!-- Metric 3: Verified Reviews -->
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="metric-number-wrap">
+              <span class="counter" data-target="350">0</span>
+              <span class="metric-suffix">+</span>
+            </div>
+            <span class="metric-label">VERIFIED CUSTOMER REVIEWS</span>
+          </div>
+
+          <!-- Metric 4: Air-Conditioned Floor -->
+          <div class="metric-item">
+            <div class="metric-icon">
+              <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div class="metric-number-wrap">
+              <span class="counter" data-target="100">0</span>
+              <span class="metric-suffix">%</span>
+            </div>
+            <span class="metric-label">AC FLOOR & CLEAN ENVIRONMENT</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 5: FACILITY ZONES & EQUIPMENT DEEP DIVE
+         ==================================================================== -->
+    <section class="section-padding facility-section" id="facility">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="tech-eyebrow">
+            <span class="corner-bracket">┌</span>
+            <span>THE ARSENAL</span>
+            <span class="corner-bracket">┐</span>
+          </div>
+          <h2 class="section-title">CALIBRATED IRON & ADVANCED CAMS</h2>
+          <p class="section-subtitle">
+            Curated from the world's most revered strength manufacturers. No low-grade consumer equipment.
+          </p>
+        </div>
+
+        <!-- Interactive Zone Tabs -->
+        <div class="zone-tabs" role="tablist">
+          <button class="zone-tab-btn active" role="tab" aria-selected="true" data-zone="freeweights">
+            <span class="zone-num">01</span>
+            <span class="zone-name">FREE WEIGHT RUN</span>
+          </button>
+          <button class="zone-tab-btn" role="tab" aria-selected="false" data-zone="powerlifting">
+            <span class="zone-num">02</span>
+            <span class="zone-name">OLYMPIC & POWER RIGS</span>
+          </button>
+          <button class="zone-tab-btn" role="tab" aria-selected="false" data-zone="cables">
+            <span class="zone-num">03</span>
+            <span class="zone-name">CABLE & BIOMECHANIC</span>
+          </button>
+          <button class="zone-tab-btn" role="tab" aria-selected="false" data-zone="recovery">
+            <span class="zone-num">04</span>
+            <span class="zone-name">RECOVERY & BIOHACK</span>
+          </button>
+        </div>
+
+        <!-- Zone Panels -->
+        <div class="zone-panels-wrap">
+          
+          <!-- Panel 1: Free Weights -->
+          <div class="zone-panel active" id="zone-freeweights">
+            <div class="zone-grid">
+              <div class="zone-specs">
+                <h3 class="zone-panel-title">SOLID STEEL DUMBBELLS 5 TO 150 LBS</h3>
+                <p class="zone-panel-desc">
+                  Milled from solid single-billet steel and encased in dense urethane to avoid rattling or loosening. Paired with custom incline and flat benches spaced with 8 feet of clean elbow clearance.
+                </p>
+                <div class="spec-metrics">
+                  <div class="spec-item">
+                    <span class="spec-val">150 LBS</span>
+                    <span class="spec-name">Maximum Pair</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">12</span>
+                    <span class="spec-name">Adjustable Benches</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">30 MM</span>
+                    <span class="spec-name">Hard Chrome Grips</span>
+                  </div>
+                </div>
+                <div class="zone-badge-list">
+                  <span class="badge-item">Zero-Odor Urethane</span>
+                  <span class="badge-item">Precision Weight Calibrated (±0.2%)</span>
+                  <span class="badge-item">Multi-Angle Seat Locks</span>
+                </div>
+              </div>
+              <div class="zone-preview-card">
+                <div class="card-brackets">
+                  <span class="corner tl"></span><span class="corner tr"></span>
+                  <span class="corner bl"></span><span class="corner br"></span>
+                </div>
+                <img src="assets/poster.jpg" alt="Free weight dumbbell run" class="zone-img">
+                <div class="zone-img-overlay">
+                  <span class="zone-live-tag">ZONE 01 ACTIVE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Powerlifting -->
+          <div class="zone-panel" id="zone-powerlifting">
+            <div class="zone-grid">
+              <div class="zone-specs">
+                <h3 class="zone-panel-title">MONOLIFTS & COMPETITION BENCHES</h3>
+                <p class="zone-panel-desc">
+                  Six dedicated combo racks with IPF-certified safety spotter arms, band pegs, and calibrated thin-cut cast iron plates so you can pack 700+ lbs onto the bar without running out of sleeve space.
+                </p>
+                <div class="spec-metrics">
+                  <div class="spec-item">
+                    <span class="spec-val">6</span>
+                    <span class="spec-name">Competition Racks</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">IPF</span>
+                    <span class="spec-name">Spec Certified</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">8,000 LB</span>
+                    <span class="spec-name">Calibrated Iron</span>
+                  </div>
+                </div>
+                <div class="zone-badge-list">
+                  <span class="badge-item">Eleiko & Kabuki Barbells</span>
+                  <span class="badge-item">Deadlift Jack Stations</span>
+                  <span class="badge-item">Chalk Bowls Permitted</span>
+                </div>
+              </div>
+              <div class="zone-preview-card">
+                <div class="card-brackets">
+                  <span class="corner tl"></span><span class="corner tr"></span>
+                  <span class="corner bl"></span><span class="corner br"></span>
+                </div>
+                <img src="assets/story-athlete.jpg" alt="Powerlifting platform" class="zone-img">
+                <div class="zone-img-overlay">
+                  <span class="zone-live-tag">ZONE 02 ACTIVE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Cables -->
+          <div class="zone-panel" id="zone-cables">
+            <div class="zone-grid">
+              <div class="zone-specs">
+                <h3 class="zone-panel-title">SMOOTH ROTARY PULLEY MATRIX</h3>
+                <p class="zone-panel-desc">
+                  Aircraft-grade steel cables lined with Teflon sleeving for zero stick-slip friction. 360-degree rotating pulleys allow pinpoint alignment with joint angles for triceps, chest, and lat work.
+                </p>
+                <div class="spec-metrics">
+                  <div class="spec-item">
+                    <span class="spec-val">1:1 & 2:1</span>
+                    <span class="spec-name">Dual Pulley Ratios</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">4</span>
+                    <span class="spec-name">Cable Crossover Towers</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">40+</span>
+                    <span class="spec-name">Ergonomic Grips</span>
+                  </div>
+                </div>
+                <div class="zone-badge-list">
+                  <span class="badge-item">Mag Grips</span>
+                  <span class="badge-item">D-Handle System</span>
+                  <span class="badge-item">Ankle Cuff Cuffs</span>
+                </div>
+              </div>
+              <div class="zone-preview-card">
+                <div class="card-brackets">
+                  <span class="corner tl"></span><span class="corner tr"></span>
+                  <span class="corner bl"></span><span class="corner br"></span>
+                </div>
+                <img src="assets/story-athlete.jpg" alt="Cable station" class="zone-img">
+                <div class="zone-img-overlay">
+                  <span class="zone-live-tag">ZONE 03 ACTIVE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Recovery -->
+          <div class="zone-panel" id="zone-recovery">
+            <div class="zone-grid">
+              <div class="zone-specs">
+                <h3 class="zone-panel-title">CONTRAST HYDROTHERAPY & LIGHT SUITE</h3>
+                <p class="zone-panel-desc">
+                  Complete recovery facilities featuring filtered 42°F plunge tubs and 195°F Finnish dry saunas. Flush lactic acid and downregulate sympathetic nervous system fatigue.
+                </p>
+                <div class="spec-metrics">
+                  <div class="spec-item">
+                    <span class="spec-val">42°F</span>
+                    <span class="spec-name">Cold Plunge</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">195°F</span>
+                    <span class="spec-name">Cedar Sauna</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-val">660 NM</span>
+                    <span class="spec-name">Red Light Bed</span>
+                  </div>
+                </div>
+                <div class="zone-badge-list">
+                  <span class="badge-item">Normatec 3 Boots</span>
+                  <span class="badge-item">Hyperice Massage Guns</span>
+                  <span class="badge-item">Cold Towel Service</span>
+                </div>
+              </div>
+              <div class="zone-preview-card">
+                <div class="card-brackets">
+                  <span class="corner tl"></span><span class="corner tr"></span>
+                  <span class="corner bl"></span><span class="corner br"></span>
+                </div>
+                <img src="assets/hero-athlete.jpg" alt="Recovery suite" class="zone-img">
+                <div class="zone-img-overlay">
+                  <span class="zone-live-tag">ZONE 04 ACTIVE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 6: ELITE MASTER COACHES
+         ==================================================================== -->
+    <section class="section-padding coaches-section" id="coaches">
+      <div class="container">
+        
+        <div class="section-header center">
+          <div class="tech-eyebrow">
+            <span class="corner-bracket">┌</span>
+            <span>ELITE FACULTY</span>
+            <span class="corner-bracket">┐</span>
+          </div>
+          <h2 class="section-title">MEET YOUR COACHING STAFF</h2>
+          <p class="section-subtitle">
+            World champions, biomechanists, and master programmers. No junior interns.
+          </p>
+        </div>
+
+        <div class="coaches-grid">
+          
+          <!-- Coach 1 -->
+          <div class="coach-card">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="coach-img-wrap">
+              <img src="assets/coach-marcus.jpg" alt="Marcus Thorne - Head of Strength" class="coach-img" loading="lazy">
+              <div class="coach-discipline-pill">POWER & HYPERTROPHY</div>
+            </div>
+            <div class="coach-info">
+              <h3 class="coach-name">MARCUS THORNE</h3>
+              <span class="coach-role">Head of Strength & Periodization</span>
+              <p class="coach-bio">
+                Former national powerlifting record holder with 12 years of competitive coaching experience. Specializes in barbell mechanics, injury rehabilitation, and maximal hypertrophy.
+              </p>
+              <div class="coach-stats-row">
+                <div class="c-stat"><span>12+ YRS</span> EXP</div>
+                <div class="c-stat"><span>CSCS</span> CERT</div>
+                <div class="c-stat"><span>740 LB</span> SQUAT</div>
+              </div>
+              <button class="btn btn-ghost btn-sm book-coach-btn" data-coach="Marcus Thorne">CONSULT WITH MARCUS</button>
+            </div>
+          </div>
+
+          <!-- Coach 2 -->
+          <div class="coach-card">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="coach-img-wrap">
+              <img src="assets/coach-elena.jpg" alt="Elena Vance - Athletic Conditioning" class="coach-img" loading="lazy">
+              <div class="coach-discipline-pill">CONDITIONING & MOBILITY</div>
+            </div>
+            <div class="coach-info">
+              <h3 class="coach-name">ELENA VANCE</h3>
+              <span class="coach-role">Director of Athletic Performance</span>
+              <p class="coach-bio">
+                Ex-Division 1 strength trainer and competitive Hyrox athlete. Master of high-capacity conditioning, metabolic conditioning, and rotational power development.
+              </p>
+              <div class="coach-stats-row">
+                <div class="c-stat"><span>9+ YRS</span> EXP</div>
+                <div class="c-stat"><span>MS KINES</span> DEGREE</div>
+                <div class="c-stat"><span>HYROX</span> PRO</div>
+              </div>
+              <button class="btn btn-ghost btn-sm book-coach-btn" data-coach="Elena Vance">CONSULT WITH ELENA</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 7: INTERACTIVE MACRO & TRAINING CALCULATOR
+         ==================================================================== -->
+    <section class="section-padding calculator-section" id="calculator">
+      <div class="container">
+        
+        <div class="calculator-card">
+          <div class="card-brackets">
+            <span class="corner tl"></span><span class="corner tr"></span>
+            <span class="corner bl"></span><span class="corner br"></span>
+          </div>
+
+          <div class="calc-header">
+            <div class="tech-eyebrow">
+              <span class="corner-bracket">┌</span>
+              <span>INTERACTIVE TOOL</span>
+              <span class="corner-bracket">┐</span>
+            </div>
+            <h2 class="calc-title">BIOMETRIC ENERGY & SPLIT CALCULATOR</h2>
+            <p class="calc-desc">Calculate your baseline daily energy expenditure and recommended training cadence.</p>
+          </div>
+
+          <div class="calc-grid">
+            <!-- Inputs Column -->
+            <form class="calc-form" id="biometricForm" onsubmit="return false;">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calcGender">BIOLOGICAL SEX</label>
+                  <select id="calcGender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="calcAge">AGE (YEARS)</label>
+                  <input type="number" id="calcAge" class="form-control" value="28" min="16" max="90">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calcWeight">WEIGHT (KG)</label>
+                  <input type="number" id="calcWeight" class="form-control" value="82" min="40" max="250">
+                </div>
+                <div class="form-group">
+                  <label for="calcHeight">HEIGHT (CM)</label>
+                  <input type="number" id="calcHeight" class="form-control" value="180" min="130" max="230">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="calcActivity">TRAINING ACTIVITY LEVEL</label>
+                <select id="calcActivity" class="form-control">
+                  <option value="1.2">Sedentary (Office desk work, minimal exercise)</option>
+                  <option value="1.375">Light (1-2 gym sessions/week)</option>
+                  <option value="1.55" selected>Moderate (3-4 heavy sessions/week)</option>
+                  <option value="1.725">Heavy Athlete (5-6 intense sessions/week)</option>
+                  <option value="1.9">Elite Competitive (2x daily sessions)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="calcGoal">PRIMARY OBJECTIVE</label>
+                <div class="goal-pill-group">
+                  <label class="goal-pill">
+                    <input type="radio" name="goal" value="cut">
+                    <span>AGGRESSIVE CUT</span>
+                  </label>
+                  <label class="goal-pill active">
+                    <input type="radio" name="goal" value="maintain" checked>
+                    <span>RECOMPOSITION</span>
+                  </label>
+                  <label class="goal-pill">
+                    <input type="radio" name="goal" value="bulk">
+                    <span>LEAN BULK</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+
+            <!-- Results Display Column -->
+            <div class="calc-results" id="calcResults">
+              <div class="result-box-top">
+                <span class="res-eyebrow">TARGET DAILY CALORIC INTAKE</span>
+                <div class="res-calories-val">
+                  <span id="resCalories">2,640</span>
+                  <span class="unit">KCAL / DAY</span>
+                </div>
+                <span class="res-split-desc" id="resSplitDesc">Maintenance intake for muscle retention and steady strength gains.</span>
+              </div>
+
+              <div class="macros-breakdown">
+                <div class="macro-item">
+                  <span class="m-val" id="resProtein">180g</span>
+                  <span class="m-label">PROTEIN (2.2g/kg)</span>
+                </div>
+                <div class="macro-item">
+                  <span class="m-val" id="resCarbs">290g</span>
+                  <span class="m-label">CARBOHYDRATES</span>
+                </div>
+                <div class="macro-item">
+                  <span class="m-val" id="resFats">68g</span>
+                  <span class="m-label">HEALTHY FATS</span>
+                </div>
+              </div>
+
+              <div class="recommendation-box">
+                <div class="rec-title">RECOMMENDED POWER FITNESS PROTOCOL:</div>
+                <div class="rec-body" id="resProtocol">
+                  <strong>4-Day Upper/Lower Strength Hypertrophy Split</strong> with Zone 02 cable isolation and certified coaching check-in.
+                </div>
+              </div>
+
+              <a href="#vip-pass" class="btn btn-primary btn-block">
+                <span>TEST THIS AT POWER FITNESS GYM</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 8: MEMBERSHIP TIERS & TRANSPARENT PRICING
+         ==================================================================== -->
+    <section class="section-padding membership-section" id="memberships">
+      <div class="container">
+        
+        <div class="section-header center">
+          <div class="tech-eyebrow">
+            <span class="corner-bracket">┌</span>
+            <span>MEMBERSHIP TIERS</span>
+            <span class="corner-bracket">┐</span>
+          </div>
+          <h2 class="section-title">INVEST IN YOUR STRONGEST SELF</h2>
+          <p class="section-subtitle">
+            Transparent pricing. Mon–Sat 6:00 AM – 12:00 AM access. Full AC floor and certified trainer support in Wadala, Mumbai.
+          </p>
+
+          <!-- Billing Period Switcher -->
+          <div class="billing-switcher">
+            <button class="billing-btn active" id="billMonthlyBtn">MONTHLY</button>
+            <button class="billing-btn" id="billAnnualBtn">
+              ANNUAL
+              <span class="save-pill">SAVE 20%</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Tier 1: Day Pass -->
+          <div class="price-card">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="tier-name">DAY PASS</div>
+            <div class="tier-price">
+              <span class="currency">₹</span>
+              <span class="val">299</span>
+              <span class="period">/ single visit</span>
+            </div>
+            <p class="tier-desc">Full 1-day access for visitors and trial workouts.</p>
+            <hr class="tier-divider">
+            <ul class="tier-perks">
+              <li><span class="check">✓</span> Operating Hours Access (6:00 AM - 12:00 AM)</li>
+              <li><span class="check">✓</span> 100% Air-Conditioned Workout Floor</li>
+              <li><span class="check">✓</span> Full Range of Strength & Cardio Equipment</li>
+              <li><span class="check">✓</span> Clean Locker & Changing Facilities</li>
+              <li class="disabled"><span class="cross">✕</span> Dedicated 1-on-1 Personal Trainer</li>
+            </ul>
+            <a href="#vip-pass" class="btn btn-ghost btn-block">GET SINGLE PASS</a>
+          </div>
+
+          <!-- Tier 2: Iron Access (Popular) -->
+          <div class="price-card is-popular">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="popular-ribbon">RECOMMENDED</div>
+            <div class="tier-name">IRON ACCESS</div>
+            <div class="tier-price">
+              <span class="currency">₹</span>
+              <span class="val" id="priceIron">1,499</span>
+              <span class="period" id="periodIron">/ month</span>
+            </div>
+            <p class="tier-desc">Unrestricted monthly access for committed lifters.</p>
+            <hr class="tier-divider">
+            <ul class="tier-perks">
+              <li><span class="check">✓</span> <strong>Full Mon–Sat 6 AM – 12 AM Facility Access</strong></li>
+              <li><span class="check">✓</span> Unrestricted Access to All Equipment Zones</li>
+              <li><span class="check">✓</span> Fully Air-Conditioned & Sanitized Environment</li>
+              <li><span class="check">✓</span> Initial Body Composition & Split Assessment</li>
+              <li><span class="check">✓</span> Clean Locker & Shower Facilities</li>
+            </ul>
+            <a href="#vip-pass" class="btn btn-primary btn-block">
+              <span>SELECT IRON ACCESS</span>
+            </a>
+          </div>
+
+          <!-- Tier 3: Titan VIP -->
+          <div class="price-card">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="tier-name">TITAN VIP + PT</div>
+            <div class="tier-price">
+              <span class="currency">₹</span>
+              <span class="val" id="priceTitan">2,999</span>
+              <span class="period" id="periodTitan">/ month</span>
+            </div>
+            <p class="tier-desc">The premier fitness experience with certified personal coaching.</p>
+            <hr class="tier-divider">
+            <ul class="tier-perks">
+              <li><span class="check">✓</span> Everything in Iron Access Tier</li>
+              <li><span class="check">✓</span> <strong>Certified 1-on-1 Personal Trainer Guidance</strong></li>
+              <li><span class="check">✓</span> Custom Diet Plan & Nutrition Protocol</li>
+              <li><span class="check">✓</span> Ongoing Form Correction & Strength Progression</li>
+              <li><span class="check">✓</span> Guest Workout Privileges</li>
+            </ul>
+            <a href="#vip-pass" class="btn btn-ghost btn-block">SELECT TITAN VIP</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 9: CLAIM FREE 1-DAY VIP PASS (Conversion Hook)
+         ==================================================================== -->
+    <section class="section-padding vip-pass-section" id="vip-pass">
+      <div class="container">
+        <div class="vip-card-box">
+          <div class="card-brackets">
+            <span class="corner tl"></span><span class="corner tr"></span>
+            <span class="corner bl"></span><span class="corner br"></span>
+          </div>
+
+          <div class="vip-content-grid">
+            <!-- Left Info -->
+            <div class="vip-info-col">
+              <div class="tech-eyebrow">
+                <span class="corner-bracket">┌</span>
+                <span>COMPLIMENTARY ACCESS</span>
+                <span class="corner-bracket">┐</span>
+              </div>
+              <h2 class="vip-title">CLAIM YOUR 1-DAY VIP PASS</h2>
+              <p class="vip-desc">
+                Step onto the floor at Power Fitness Gym in Antop Hill, Wadala. Feel the knurling of the Olympic bars, test our complete strength and cardio lines, and experience our clean, air-conditioned workout floor firsthand.
+              </p>
+              
+              <div class="vip-benefit-list">
+                <div class="benefit-item">
+                  <div class="b-icon">✓</div>
+                  <div class="b-text">
+                    <strong>100% Air-Conditioned Workout Floor</strong>
+                    <span>Clean, hygienic, temperature-controlled training space.</span>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <div class="b-icon">✓</div>
+                  <div class="b-text">
+                    <strong>Full Strength & Cardio Equipment Range</strong>
+                    <span>Complete dumbbell run, plate/pin machines, and cardio.</span>
+                  </div>
+                </div>
+                <div class="benefit-item">
+                  <div class="b-icon">✓</div>
+                  <div class="b-text">
+                    <strong>Certified Personal Training Consult</strong>
+                    <span>Complimentary form assessment and fitness routine review.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="vip-form-col">
+              <form class="vip-pass-form" id="vipPassForm">
+                <div class="form-group">
+                  <label for="vipName">FULL NAME *</label>
+                  <input type="text" id="vipName" class="form-control" placeholder="Rahul Sharma" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="vipEmail">EMAIL ADDRESS *</label>
+                  <input type="email" id="vipEmail" class="form-control" placeholder="athlete@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="vipPhone">MOBILE NUMBER *</label>
+                  <input type="tel" id="vipPhone" class="form-control" placeholder="+91 99874 74437" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="vipInterest">PRIMARY TRAINING INTEREST</label>
+                  <select id="vipInterest" class="form-control">
+                    <option value="strength">Heavy Strength & Muscle Building</option>
+                    <option value="weightloss">Weight Loss & Fat Burn</option>
+                    <option value="coaching">Certified 1-on-1 Personal Training</option>
+                    <option value="cardio">Cardio & General Fitness</option>
+                  </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitPassBtn">
+                  <span>GENERATE INSTANT VIP PASS</span>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <p class="form-disclaimer">Zero fees. Show your digital pass at the Salt Pan Rd front desk.</p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 10: FACILITY SCHEDULE & LOCATION
+         ==================================================================== -->
+    <section class="section-padding location-section" id="contact">
+      <div class="container">
+        <div class="location-grid">
+          
+          <div class="loc-details">
+            <div class="tech-eyebrow">
+              <span class="corner-bracket">┌</span>
+              <span>VISIT THE FACILITY</span>
+              <span class="corner-bracket">┐</span>
+            </div>
+            <h2 class="loc-title">POWER FITNESS GYM — LOCATION & HOURS</h2>
+            
+            <!-- Rating Pill -->
+            <div class="rating-pill">
+              <span class="rating-stars">★★★★★</span>
+              <strong>4.9 / 5.0</strong>
+              <span class="rating-count">(350+ Verified Google Reviews)</span>
+            </div>
+
+            <div class="loc-card-row">
+              <div class="loc-box">
+                <span class="loc-box-label">OPERATING HOURS</span>
+                <p class="loc-box-val">MON – SAT: 6:00 AM – 12:00 AM</p>
+                <span class="loc-box-sub">SUNDAY: CLOSED</span>
+              </div>
+              <div class="loc-box">
+                <span class="loc-box-label">FACILITY TYPE</span>
+                <p class="loc-box-val">AIR-CONDITIONED GYM</p>
+                <span class="loc-box-sub" style="color:var(--accent-green);">Certified Trainers On Floor</span>
+              </div>
+            </div>
+
+            <div class="contact-info-list">
+              <div class="c-info-item">
+                <span class="c-key">ADDRESS</span>
+                <span class="c-val">
+                  Salt Pan Rd, Raval Pada, Sangam Nagar, Antop Hill, Mumbai, Maharashtra 400037
+                  <small style="color:var(--text-muted); display:block; margin-top:4px; font-size:0.8rem;">
+                    (Alternative mentions: Near BPCA Building, Naigaon Cross Road, Sahakar Nagar, Wadala)
+                  </small>
+                </span>
+              </div>
+              <div class="c-info-item">
+                <span class="c-key">PHONE NUMBER</span>
+                <span class="c-val"><a href="tel:+919987474437">+91 99874 74437</a></span>
+              </div>
+              <div class="c-info-item">
+                <span class="c-key">GOOGLE KNOWLEDGE GRAPH</span>
+                <span class="c-val">
+                  <a href="https://www.google.com/search?kgmid=%2Fg%2F11mhxvk6pv" target="_blank" rel="noopener">
+                    Power Fitness Gym on Google Search & Reviews ↗
+                  </a>
+                </span>
+              </div>
+              <div class="c-info-item">
+                <span class="c-key">INSTAGRAM SHOWCASE</span>
+                <span class="c-val">
+                  <a href="https://www.instagram.com/reel/DFCW9B9iHFv/" target="_blank" rel="noopener">
+                    Watch Official Video Tour on Instagram Reel ↗
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <!-- Amenities Chips -->
+            <div class="amenities-tag-cloud">
+              <span class="amenity-chip"><span class="icon-chk">✓</span> Air-Conditioned Workout Floor</span>
+              <span class="amenity-chip"><span class="icon-chk">✓</span> Full Strength & Cardio Equipment</span>
+              <span class="amenity-chip"><span class="icon-chk">✓</span> Certified Personal Training</span>
+              <span class="amenity-chip"><span class="icon-chk">✓</span> Clean & Sanitized Environment</span>
+              <span class="amenity-chip"><span class="icon-chk">✓</span> Mon–Sat 6:00 AM – 12:00 AM</span>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="loc-action-buttons">
+              <a href="tel:+919987474437" class="loc-action-btn call-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>CALL: +91 99874 74437</span>
+              </a>
+              <a href="https://wa.me/919987474437?text=Hi%20Power%20Fitness%20Gym%2C%20I%20would%20like%20to%20enquire%20about%20gym%20membership%20and%20personal%20training." target="_blank" rel="noopener" class="loc-action-btn wa-btn">
+                <span>WHATSAPP CHAT</span>
+              </a>
+              <a href="https://www.google.com/search?kgmid=%2Fg%2F11mhxvk6pv" target="_blank" rel="noopener" class="loc-action-btn maps-btn">
+                <span>GOOGLE MAPS DIRECTIONS ↗</span>
+              </a>
+              <a href="https://www.instagram.com/reel/DFCW9B9iHFv/" target="_blank" rel="noopener" class="loc-action-btn ig-btn">
+                <span>INSTAGRAM REEL ↗</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Peak Hours Visual Graph -->
+          <div class="peak-hours-card">
+            <div class="card-brackets">
+              <span class="corner tl"></span><span class="corner tr"></span>
+              <span class="corner bl"></span><span class="corner br"></span>
+            </div>
+            <div class="peak-header">
+              <h3 class="peak-title">FACILITY FLOW · MON – SAT</h3>
+              <span class="peak-badge">6 AM - 12 AM</span>
+            </div>
+            <div class="peak-bars">
+              <div class="bar-col"><div class="bar-fill" style="height: 35%;"></div><span>06:00</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height: 60%;"></div><span>08:00</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height: 45%;"></div><span>10:00</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height: 30%;"></div><span>13:00</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height: 50%;"></div><span>16:00</span></div>
+              <div class="bar-col is-peak"><div class="bar-fill" style="height: 95%;"></div><span>18:00</span></div>
+              <div class="bar-col is-peak"><div class="bar-fill" style="height: 90%;"></div><span>20:00</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height: 60%;"></div><span>22:00</span></div>
+              <div class="bar-col"><div class="bar-fill" style="height: 25%;"></div><span>23:30</span></div>
+            </div>
+            <div class="peak-legend">
+              <span class="leg-item"><span class="dot red"></span> Peak Evening Hours (18:00 - 21:00)</span>
+              <span class="leg-item"><span class="dot gray"></span> Smooth Morning & Midday Flow</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#top" class="brand-logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </span>
+            <span class="logo-text">POWER FITNESS<span class="accent-dot">.</span></span>
+          </a>
+          <p class="footer-tagline">
+            Salt Pan Road, Raval Pada, Sangam Nagar, Antop Hill, Wadala, Mumbai 400037. Premier air-conditioned workout facility with certified personal trainers, complete strength and cardio lines, and 4.9★ rated community.
+          </p>
+          <p style="margin-top:0.75rem; font-family:var(--font-mono); font-size:0.8rem; color:var(--text-secondary);">
+            Call: <a href="tel:+919987474437" style="color:var(--accent-red); font-weight:700;">+91 99874 74437</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="col-title">EXPLORE</h4>
+          <ul class="col-links">
+            <li><a href="#world">Scroll World 3D Tour</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+            <li><a href="#story">Our Story & Rating (4.9★)</a></li>
+            <li><a href="#facility">Equipment Arsenal</a></li>
+            <li><a href="#coaches">Certified Coaches</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="col-title">KEY LINKS</h4>
+          <ul class="col-links">
+            <li><a href="https://www.google.com/search?kgmid=%2Fg%2F11mhxvk6pv" target="_blank" rel="noopener">Google Knowledge Graph</a></li>
+            <li><a href="https://www.instagram.com/reel/DFCW9B9iHFv/" target="_blank" rel="noopener">Instagram Video Reel</a></li>
+            <li><a href="https://wa.me/919987474437" target="_blank" rel="noopener">WhatsApp Concierge</a></li>
+            <li><a href="#contact">Location & Hours</a></li>
+            <li><a href="#calculator">Macro Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="col-title">VIP ACCESS</h4>
+          <p class="col-text">Get priority booking for certified personal training and membership offers.</p>
+          <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+            <input type="tel" placeholder="+91 Mobile number" required>
+            <button type="submit" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 POWER FITNESS GYM. ALL RIGHTS RESERVED.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Protocol</a>
+          <a href="#">Terms of Facility Access</a>
+          <a href="#">Safety & Gym Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Instant VIP Pass Modal -->
+  <div class="modal-overlay" id="passModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" aria-label="Close Modal">&times;</button>
+      <div class="modal-body text-center">
+        <div class="modal-success-icon">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 class="modal-title">VIP PASS ACTIVATED</h3>
+        <p class="modal-desc">
+          Welcome to Power Fitness Gym. Your 1-day all-access trial key has been registered.
+        </p>
+
+        <!-- Simulated Barcode Pass -->
+        <div class="barcode-card">
+          <div class="barcode-header">
+            <span>POWER FITNESS GYM // MUMBAI VIP PASS</span>
+            <span class="status-live">VALID 14 DAYS</span>
+          </div>
+          <div class="barcode-athlete" id="modalAthleteName">ATHLETE NAME</div>
+          <div class="barcode-graphic">
+            <div class="bar-lines"></div>
+          </div>
+          <div class="barcode-code" id="modalPassCode">PFG-2026-8849-VIP</div>
+        </div>
+
+        <p class="modal-instructions">
+          Show this pass or your registered mobile number at the Power Fitness Gym front desk on Salt Pan Rd, Antop Hill, Wadala for immediate workout access.
+        </p>
+        <button class="btn btn-primary btn-block" id="modalDoneBtn">DONE</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Tour Modal -->
+  <div class="modal-overlay" id="videoModal" aria-hidden="true">
+    <div class="modal-dialog video-modal-dialog">
+      <button class="modal-close" id="videoModalClose" aria-label="Close Video">&times;</button>
+      <div class="modal-video-wrapper">
+        <video id="tourVideo" controls playsinline style="width:100%; height:auto; display:block; border-radius:8px;"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/scroll-engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
