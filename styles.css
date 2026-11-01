@@ -78,12 +78,14 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
 }
 
 body {
   overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   background-color: var(--bg-deep);
@@ -1040,6 +1042,10 @@ button {
   gap: 0.75rem;
   color: var(--text-secondary);
   letter-spacing: 0.08em;
+}
+
+.prompt-mobile {
+  display: none;
 }
 
 .mouse-icon {
@@ -2890,7 +2896,37 @@ select.form-control {
 
   /* --------------------------------------------------------------------------
      HERO SECTION (SECTION 1 - SCROLL WORLD)
+     Eliminates empty 380vh virtual track and black screens on mobile touchscreens
      -------------------------------------------------------------------------- */
+  .scroll-track {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .scroll-scrub-bar {
+    display: none !important;
+  }
+
+  .scroll-world-section {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .world-stage {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100%;
+    height: 100svh;
+    height: 100dvh;
+    min-height: 560px;
+    max-height: 920px;
+    overflow: hidden;
+  }
+
   .stage-vignette {
     background: radial-gradient(circle at 50% 35%, transparent 30%, rgba(5, 5, 8, 0.65) 100%),
                 linear-gradient(to bottom, rgba(5, 5, 8, 0.75) 0%, transparent 18%, transparent 55%, rgba(5, 5, 8, 0.95) 92%);
@@ -2929,12 +2965,16 @@ select.form-control {
     max-width: 100%;
     margin-top: auto;
     margin-bottom: clamp(0.5rem, 1.5vh, 1rem);
-    min-height: 275px;
+    min-height: auto !important;
     display: flex;
     align-items: flex-end;
   }
 
   .hud-card {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
     padding: clamp(1rem, 3.5vw, 1.35rem);
     background: rgba(11, 11, 15, 0.88);
     backdrop-filter: blur(20px);
@@ -2942,6 +2982,28 @@ select.form-control {
     border: 1px solid rgba(255, 42, 63, 0.28);
     border-radius: 12px;
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 42, 63, 0.12);
+  }
+
+  .hud-card.hud-card--0 {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  .hud-card--1,
+  .hud-card--2,
+  .hud-card--3 {
+    display: none !important;
+  }
+
+  .prompt-desktop {
+    display: none !important;
+  }
+
+  .prompt-mobile {
+    display: inline !important;
   }
 
   .hud-badge-row {

@@ -3,11 +3,10 @@
  * -----------------------------------------------------------------------------
  * High-performance scroll-scrubbed camera engine inspired by the scroll-world skill.
  * Features:
- * - In-memory Blob playback (100% seekable, avoids HTTP range request freeze)
- * - RequestAnimationFrame lerped smoothing
- * - Decoder seek-coalescing (never queues new seeks while decoder is busy)
- * - Mobile touch priming for iOS Safari
- * - Synchronized narrative HUD cards and waypoint navigation
+ * - Desktop: In-memory Blob playback (100% seekable, avoids HTTP range request freeze)
+ * - Desktop: RequestAnimationFrame lerped smoothing & decoder seek-coalescing
+ * - Desktop: Synchronized narrative HUD cards and waypoint navigation
+ * - Mobile: Smooth ambient background loop & natural document scroll (no black screens or dead swipes)
  */
 
 (function () {
@@ -29,12 +28,12 @@
     document.getElementById('hudCard3')
   ];
 
-  if (!worldSection || !video || !worldTrack) return;
+  if (!worldSection || !video) return;
 
   // Preferences & Device Detection
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
-  const isMobile = () => isTouchDevice || window.innerWidth <= 860;
+  const isMobile = () => isTouchDevice || window.innerWidth <= 768;
 
   // State
   let videoReady = false;
@@ -56,7 +55,39 @@
   const clamp = (val, min = 0, max = 1) => Math.min(max, Math.max(min, val));
 
   /**
-   * 1. LOAD VIDEO AS IN-MEMORY BLOB
+   * MOBILE VIDEO PLAYER
+   * On mobile, play smooth ambient background loop — avoiding jerky touch seeks
+   * and black video decoder frame freeze.
+   */
+  function initMobileVideo() {
+    if (!video) return;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('loop', '');
+    video.src = VIDEO_URL;
+
+    function playMobile() {
+      const p = video.play();
+      if (p !== undefined) {
+        p.then(() => {
+          if (worldStage) worldStage.classList.add('video-active');
+        }).catch(() => {});
+      }
+    }
+
+    video.addEventListener('canplay', playMobile, { once: true });
+    video.addEventListener('loadeddata', playMobile, { once: true });
+    window.addEventListener('touchstart', playMobile, { once: true, passive: true });
+    window.addEventListener('scroll', playMobile, { once: true, passive: true });
+    playMobile();
+  }
+
+  /**
+   * 1. LOAD VIDEO AS IN-MEMORY BLOB (DESKTOP)
    * Avoids frozen frame 0 issue on static servers that lack HTTP range headers
    */
   function initBlobVideo() {
@@ -79,7 +110,7 @@
 
         // Hide still poster only after real video frame paints
         video.addEventListener('seeked', () => {
-          worldStage.classList.add('video-active');
+          if (worldStage) worldStage.classList.add('video-active');
         }, { once: true });
 
         // Touch priming callback
@@ -94,15 +125,11 @@
         video.addEventListener('loadedmetadata', () => {
           videoDuration = video.duration || 10.0;
           videoReady = true;
-          worldStage.classList.add('video-active');
+          if (worldStage) worldStage.classList.add('video-active');
         });
       });
   }
 
-  /**
-   * 2. PRIME VIDEO FOR IOS SAFARI
-   * iOS requires a user gesture before video will decode/seek reliably
-   */
   function primeVideo(v) {
     if (!v) return;
     try {
@@ -125,9 +152,11 @@
   window.addEventListener('pointerdown', handleFirstUserGesture, { once: true, passive: true });
 
   /**
-   * 3. SCROLL METRICS & PROGRESS CALCULATION
+   * 3. SCROLL METRICS & PROGRESS CALCULATION (DESKTOP)
    */
   function onScrollUpdate() {
+    if (isMobile() || !worldTrack) return;
+
     const scrollY = window.scrollY || window.pageYOffset;
     const trackRect = worldTrack.getBoundingClientRect();
     const trackTop = trackRect.top + scrollY;
@@ -180,18 +209,16 @@
   }
 
   /**
-   * 4. SMOOTH RAF VIDEO SCRUBBER LOOP
-   * Features seek coalescing for silky 60fps performance on mobile
+   * 4. SMOOTH RAF VIDEO SCRUBBER LOOP (DESKTOP)
    */
   function scrubLoop() {
-    if (videoReady && video && !prefersReducedMotion) {
-      // Seek coalescing: If decoder is busy resolving last seek, wait for it
+    if (!isMobile() && videoReady && video && !prefersReducedMotion) {
       if (!video.seeking) {
-        const lerpFactor = isMobile() ? 0.22 : 0.16;
+        const lerpFactor = 0.16;
         currentProgress += (targetProgress - currentProgress) * lerpFactor;
 
         const targetTime = clamp(currentProgress * videoDuration, 0, videoDuration - 0.05);
-        const threshold = isMobile() ? 0.03 : 0.012;
+        const threshold = 0.012;
 
         if (Math.abs(video.currentTime - targetTime) > threshold) {
           try {
@@ -205,13 +232,13 @@
   }
 
   /**
-   * 5. WAYPOINT JUMP NAVIGATION
+   * 5. WAYPOINT JUMP NAVIGATION (DESKTOP)
    */
   function setupWaypointNavigation() {
     routeWaypoints.forEach(wp => {
       wp.addEventListener('click', () => {
         const index = parseInt(wp.getAttribute('data-index'), 10);
-        if (isNaN(index) || !BEATS[index]) return;
+        if (isNaN(index) || !BEATS[index] || !worldTrack) return;
 
         const beatMid = BEATS[index].mid;
         const scrollY = window.scrollY || window.pageYOffset;
@@ -237,12 +264,25 @@
     }
   }, { passive: true });
 
-  window.addEventListener('resize', onScrollUpdate, { passive: true });
+  window.addEventListener('resize', () => {
+    if (isMobile()) {
+      if (video && !video.loop) {
+        video.loop = true;
+        video.play().catch(() => {});
+      }
+    } else {
+      onScrollUpdate();
+    }
+  }, { passive: true });
 
   // Init
-  initBlobVideo();
-  setupWaypointNavigation();
-  onScrollUpdate();
-  requestAnimationFrame(scrubLoop);
+  if (isMobile()) {
+    initMobileVideo();
+  } else {
+    initBlobVideo();
+    setupWaypointNavigation();
+    onScrollUpdate();
+    requestAnimationFrame(scrubLoop);
+  }
 
 })();
