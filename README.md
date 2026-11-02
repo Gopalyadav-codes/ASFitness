@@ -55,7 +55,7 @@ An immersive, modern, high-performance web experience for **AS FITNESS**, featur
 
 2. Start the local server:
    ```bash
-   node server.js
+   node local-server.js
    ```
 
 3. Open your browser and navigate to:

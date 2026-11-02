@@ -12,7 +12,7 @@
 (function () {
   'use strict';
 
-  const VIDEO_URL = '99c5ccbc-2608-4a26-8474-3e1148f199d5.mp4';
+  const VIDEO_URL = '/99c5ccbc-2608-4a26-8474-3e1148f199d5.mp4';
   const worldSection = document.getElementById('world');
   const worldStage = document.getElementById('worldStage');
   const worldTrack = document.getElementById('worldScrollTrack');

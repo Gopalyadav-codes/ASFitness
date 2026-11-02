@@ -486,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (storyVideoBtn && videoModal && tourVideo) {
     storyVideoBtn.addEventListener('click', () => {
-      tourVideo.src = '99c5ccbc-2608-4a26-8474-3e1148f199d5.mp4';
+      tourVideo.src = '/99c5ccbc-2608-4a26-8474-3e1148f199d5.mp4';
       videoModal.classList.add('is-active');
       videoModal.setAttribute('aria-hidden', 'false');
       tourVideo.play().catch(() => {});
