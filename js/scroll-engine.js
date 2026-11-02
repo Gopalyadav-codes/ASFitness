@@ -1,5 +1,5 @@
 /**
- * POWER FITNESS GYM — SCROLL WORLD ENGINE
+ * AS FITNESS — SCROLL WORLD ENGINE
  * -----------------------------------------------------------------------------
  * High-performance scroll-scrubbed camera engine inspired by the scroll-world skill.
  * Features:

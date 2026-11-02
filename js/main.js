@@ -1,5 +1,5 @@
 /**
- * POWER FITNESS GYM — MAIN APPLICATION SCRIPT
+ * AS FITNESS — MAIN APPLICATION SCRIPT
  * -----------------------------------------------------------------------------
  * Interactivity, calculations, modal management, metric animations,
  * and ambient Web Audio synthesizer.
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateHeader();
 
   /* ==========================================================================
-     LIVE GYM OPERATING STATUS (Mon-Sat: 6 AM - 12 AM, Sun: Closed)
+     LIVE GYM OPERATING STATUS (Mon-Sat: 6 AM - 11 PM, Sun: Closed)
      ========================================================================== */
   function updateGymLiveStatus() {
     const statusPill = document.querySelector('.live-status-pill');
@@ -115,9 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (day === 0) {
       indicator.classList.add('is-closed');
       textEl.innerHTML = 'CLOSED TODAY <span class="dim">· OPENS MON 6 AM</span>';
-    } else if (hour >= 6 && hour < 24) {
+    } else if (hour >= 6 && hour < 23) {
       indicator.classList.remove('is-closed');
-      textEl.innerHTML = 'OPEN NOW <span class="dim">· 6 AM - 12 AM</span>';
+      textEl.innerHTML = 'OPEN NOW <span class="dim">· 6 AM - 11 PM</span>';
     } else {
       indicator.classList.add('is-closed');
       textEl.innerHTML = 'OPENS AT 6:00 AM <span class="dim">· MON - SAT</span>';
@@ -454,7 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Generate random VIP serial number
       const randomSerial = Math.floor(1000 + Math.random() * 9000);
-      const code = `PFG-2026-${randomSerial}-VIP`;
+      const code = `ASF-2026-${randomSerial}-VIP`;
 
       if (modalAthleteName) modalAthleteName.textContent = athleteName || 'REGISTERED ATHLETE';
       if (modalPassCode) modalPassCode.textContent = code;

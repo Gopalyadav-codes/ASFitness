@@ -1,0 +1,12 @@
+{
+  "name": "as-fitness",
+  "version": "1.0.0",
+  "description": "AS FITNESS - Prabhadevi, Mumbai",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

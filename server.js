@@ -72,5 +72,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Power Fitness Gym server running at http://localhost:${PORT}/`);
+  console.log(`AS Fitness server running at http://localhost:${PORT}/`);
 });
